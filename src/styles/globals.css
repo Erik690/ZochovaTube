@@ -5,7 +5,7 @@ import Container from "@mui/material/Container";
 
 export const metadata = { title: "globals  | ZochovaTube" }
 
-export default function Home() {
+export default function globals() {
  
   return (
         <Container>

@@ -5,7 +5,7 @@ import Container from "@mui/material/Container";
 
 export const metadata = { title: "HomeView  | ZochovaTube" }
 
-export default function Home() {
+export default function HomeView() {
  
   return (
         <Container>
