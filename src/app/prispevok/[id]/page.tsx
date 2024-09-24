@@ -1,15 +1,15 @@
-// src/app/prispevok/page.tsx
+// src/app/prispevok/[id]/page.tsx
 
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 
-export const metadata = { title: "Zoznam príspevkov  | ZochovaTube" }
+export const metadata = { title: "Detail príspevku  | ZochovaTube" }
 
 export default function PrispevokList() {
  
   return (
         <Container>
-            <Typography> Zoznam príspevkov </Typography>
+            <Typography> Detail príspevku </Typography>
         </Container>
   );
 }
