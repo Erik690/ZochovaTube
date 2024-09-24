@@ -1,0 +1,15 @@
+// src/app/globals/page.tsx
+
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
+
+export const metadata = { title: "globals  | ZochovaTube" }
+
+export default function Home() {
+ 
+  return (
+        <Container>
+            <Typography> globals </Typography>
+        </Container>
+  );
+}
