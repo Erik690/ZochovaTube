@@ -5,12 +5,14 @@
 
 
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import BottomNavigation from '@mui/material/BottomNavigation';
-import BottomNavigationAction from '@mui/material/BottomNavigationAction';
-import RestoreIcon from '@mui/icons-material/Restore';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
+import { BottomNavigation, BottomNavigationAction, Box } from '@mui/material';
+import HomeIcon from '@mui/icons-material/Home';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import  from '@mui/material/';
+import from '@mui/icons-material/';
+import  from '@mui/icons-material/';
+import  from '@mui/icons-material/';
+import { UseRouter } from '';
 
 export default function SimpleBottomNavigation() {
   const [value, setValue] = React.useState(0);
