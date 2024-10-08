@@ -18,3 +18,4 @@ git config –global user.email “moj email na githube“- moj email na githube
 git remote add origin (link na mojom githube) – priame prepojenie linku na githube
 git remote -v – kontorla spravnosti
 git add . - git prida celý projekt na github
+npm install @mui/icons-material @mui/material @emotion/styled @emotion/react - inštalovanie importnutých ikon
