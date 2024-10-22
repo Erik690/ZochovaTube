@@ -1,11 +1,13 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import NavBar from "../components/NavBar";
+// src/app/layout.tsx
 
+import { Metadata } from "next";
+import "./globals.css";
+import Navbar from "../components/NavBar";
+import AuthProvider from "../components/AuthProvider";
 
 export const metadata: Metadata = {
-  title: "ZoškaTube",
-  description: "Made by EK",
+  title: "ZochovaTube",
+  description: "Created by EK",
 };
 
 export default function RootLayout({
@@ -14,16 +16,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body >
-          <div style={{minHeight: "100vh", display: "flex", flexDirection: "column"}}>
+    <html lang="sk">
+      <body>
+        <AuthProvider>
+          <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
             <main style={{ flexGrow: 1 }}>
-            {children}
+              {children}
             </main>
           </div>
-          <NavBar/>
+          <Navbar /> 
+        </AuthProvider>
       </body>
     </html>
   );
 }
+
 
