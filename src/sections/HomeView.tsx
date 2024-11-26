@@ -1,26 +1,16 @@
+// src/section/Homeview.tsx
+
+
 import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
+import Conrainer from "@mui/material/Container";
 
-export const metadata = { title: "HomeView | ZochovaTube" };
+export const metadata = { title: "Homeview | ZoškaMeme" };
 
-interface HomeViewProps {
-  isLoggedIn: boolean;
-}
+export default function Homeview() {
 
-export default function HomeView({ isLoggedIn }: HomeViewProps) {
   return (
-    <Container>
-      {isLoggedIn ? (
-        <>
-          <Typography variant="h4">Vitajte späť na ZochovaTube!</Typography>
-          <Typography>Vaše veci sa zobrazia tu.</Typography>
-        </>
-      ) : (
-        <>
-          <Typography variant="h4">Vitajte na ZochovaTube!</Typography>
-          <Typography>Prosím prihláste sa.</Typography>
-        </>
-      )}
-    </Container>
+    <Conrainer>
+      <Typography> Homeview </Typography>
+    </Conrainer>
   );
 }

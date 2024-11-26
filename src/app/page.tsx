@@ -1,17 +1,17 @@
+// src/app/page.tsx
+'use client';
+
+import { useSession } from 'next-auth/react';
 import Typography from "@mui/material/Typography";
-import HomeView from "../sections/HomeView"; // Ensure the path is correct
+import HomePagePrihlaseny from "../sections/HomePagePrihlaseny";
+import HomePageNeprihlaseny from "../sections/HomePageNeprihlaseny";
 
-export const metadata = { title: "Domov | ZochovaTube" };
+export default function Home() {
+  const { data: session } = useSession();
 
-interface HomeProps {
-  isLoggedIn: boolean; // Add a prop to indicate if the user is logged in
-}
-
-export default function Home({ isLoggedIn }: HomeProps) {
-  return (
-    <>
-      <Typography>Domovská stránka</Typography>
-      <HomeView isLoggedIn={isLoggedIn} /> {/* Pass the isLoggedIn prop to HomeView */}
-    </>
-  );
+  if (session) {
+    return <HomePagePrihlaseny />;
+  } else {
+    return <HomePageNeprihlaseny />;
+  }
 }

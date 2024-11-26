@@ -6,7 +6,7 @@ import Container from "@mui/material/Container";
 
 export const metadata = { title: "Podmienky  | ZochovaTube" }
 
-export default function Home() {
+export default function TermsConditions() {
  
   return (
         <Container>
