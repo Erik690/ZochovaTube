@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import "./globals.css";
 import Navbar from "../components/NavBar";
 import AuthProvider from "../components/AuthProvider";
+import { ThemeProvider } from "@mui/material/styles";
 
 export const metadata: Metadata = {
   title: "ZochovaTube",
@@ -19,12 +20,12 @@ export default function RootLayout({
     <html lang="sk">
       <body>
         <AuthProvider>
-          <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-            <main style={{ flexGrow: 1 }}>
+          <ThemeProvider>
+            <main>
               {children}
             </main>
-          </div>
           <Navbar /> 
+          </ThemeProvider>
         </AuthProvider>
       </body>
     </html>
