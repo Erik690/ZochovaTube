@@ -10,7 +10,8 @@ import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined
 import ExitToAppOutlinedIcon from '@mui/icons-material/ExitToAppOutlined';
 import Box from '@mui/material/Box';
 import { useRouter } from 'next/navigation';
-import { useSession, signIn, signOut } from 'next-auth/react';
+import { useSession, signIn, signOut } from 'next-auth/react'
+import { ThemeToggleButton } from "@/components/ThemeSwitcher";
 
 const NavBar: React.FC = () => {
   const [value, setValue] = useState(0);

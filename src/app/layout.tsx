@@ -20,12 +20,11 @@ export default function RootLayout({
     <html lang="sk">
       <body>
         <AuthProvider>
-          <ThemeProvider>
+
             <main>
               {children}
             </main>
           <Navbar /> 
-          </ThemeProvider>
         </AuthProvider>
       </body>
     </html>
