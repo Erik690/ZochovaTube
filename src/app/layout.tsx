@@ -4,11 +4,11 @@ import { Metadata } from "next";
 import "./globals.css";
 import Navbar from "../components/NavBar";
 import AuthProvider from "../components/AuthProvider";
-import { ThemeProvider } from "@mui/material/styles";
+import { ThemeSwitcherProvider } from "@/components/ThemeSwitcher";
 
 export const metadata: Metadata = {
-  title: "ZochovaTube",
-  description: "Created by EK",
+  title: "ZoškaMeme",
+  description: "Generate by MK",
 };
 
 export default function RootLayout({
@@ -20,11 +20,12 @@ export default function RootLayout({
     <html lang="sk">
       <body>
         <AuthProvider>
-
-            <main>
-              {children}
-            </main>
-          <Navbar /> 
+          <ThemeSwitcherProvider>
+            <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+              <main style={{ flexGrow: 1 }}>{children}</main>
+            </div>
+            <Navbar />
+          </ThemeSwitcherProvider> 
         </AuthProvider>
       </body>
     </html>
