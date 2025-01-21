@@ -1,17 +1,33 @@
-// src/app/registracia/page.tsx
+// src/app/auth/registracia/page.tsx
 
+"use client";
 
-import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
+import CustomButton from "@/components/CustomButton";
+import { signIn } from "next-auth/react";
 
-export const metadata = { title: "Registrácia  | ZochovaTube" }
-
-export default function Registration() {
- 
+export default function Registrácia() {
   return (
-        <Container>
-            <Typography> Registrácia </Typography>
-        </Container>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "100vh",
+      }}
+    >
+      <h1>Registrácia</h1>
+
+      {/* Tlačidlo na registráciu cez Google */}
+      <CustomButton
+        onClick={() => signIn("google")}
+        backgroundColor="blue"
+        borderColor="black"
+        hoverBackgroundColor="gray"
+        hoverBorderColor="darkred"
+      >
+        Registrovať sa cez Google
+      </CustomButton>
+    </div>
   );
 }
-
