@@ -2,7 +2,7 @@
 
 "use client";
 
-import CustomButton from "@/components/CustomButton";
+import CustomButton from "@/components/CustomButtom";
 import { signIn } from "next-auth/react";
 
 export default function Registrácia() {
